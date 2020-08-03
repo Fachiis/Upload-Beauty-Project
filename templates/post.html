@@ -1,0 +1,14 @@
+{% extends 'home.html' %}
+
+{% block title %}New Post{% endblock title %}
+
+{% block content %}
+    <div class="container py-2 text-center">
+        <h2>Show Your Taste of Beauty with a Title</h2>
+        <form method='post' enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-primary">Post</button>
+        </form>
+    </div>
+{% endblock content %}
